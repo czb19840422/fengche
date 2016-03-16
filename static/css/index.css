@@ -1,0 +1,133 @@
+.container .header{
+    height: 80px;
+    width: 100%;
+    background: #5e5e5e;
+    margin-bottom: 1px;
+}
+.container .header {
+    height: 75px;
+    width: 100%;
+}
+.container .header .fcp{
+    float: left;
+    padding-left: 10px;
+}
+.container .header  .fcp p{
+    font-size: 24px;
+    color: #fff;
+    height: 75px;
+    padding-left: 60px;
+    padding-top: 30px;
+    background: url(../images/login_logo.png) no-repeat ;
+}
+.container .header .fcdl{
+    float: right;
+    padding-top: 50px;
+    padding-right: 10px;
+    color: #fff;
+    font-size: 14px;
+}
+.container .header .fcdl li{
+    list-style: none;
+    float: left;
+    padding: 0px 5px;
+}
+a:link {
+    color: #fff;
+    text-decoration: none;
+}
+a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+a:hover {
+    color:#ff7f24;
+    text-decoration: none;
+}
+a:active {
+    color:#ff7f24;
+    text-decoration: none;
+}
+.container .content{
+    height: 680px;
+    width: 100%;
+    /*background: #fff;*/
+    margin-bottom: 1px;
+}
+.container .content .cleft{
+    float: left;
+    width: 25%;
+    height: 100%;
+    background: #bce8f1;
+}
+
+.container .content .cright{
+    float: left;
+    width: 75%;
+    height: 100%;
+    background: #bce8f1;
+}
+.container .footer{
+  width: 100%;
+  padding: 9px 0;
+  background: #5e5e5e;
+  color: #fff;
+  text-align: center;
+  /*position: absolute;*/
+  /*bottom: 0;*/
+  /*left: 0;*/
+}
+
+.subNavBox {
+    width: 100%;
+    border: 1px solid #d5d5d5;
+    margin: 0;
+    border-bottom: 0;
+}
+
+.subNav {
+    border-bottom: 1px solid #d5d5d5;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333333;
+    line-height: 36px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.subNav .subNav-tit{
+    width: 196px;
+}
+
+.navContent {
+    display: none;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.navContent li .check-tit-box{
+    width: 150px;
+}
+
+.navContent li .check-box label{
+    margin-right: 12px;
+}
+.navContent li {
+    border-bottom: 1px dashed #d5d5d5;
+    background: #ffffff;
+    padding: 0 6%;
+    font-size: 14px;
+    line-height: 34px;
+    color: #666666
+}
+
+.navContent li:last-child {
+    border-bottom: 0;
+}
+
+.navContent li:hover {
+    background: #f2f2f2;
+}
+
+.power-name {
+    margin-left: 136px;
+}

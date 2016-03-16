@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>枫车运维管理系统中心</title>
+    <link href="{% static 'images/favicon.ico' %}"  rel="icon" type="image/x-icon">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/common.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/login.css' %}" rel="stylesheet" type="text/css">
+    <script src="{% static 'bootstrap/js/jquery-2.2.0.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>枫车运维管理系统</h1>
+            <form method="post" action="{% url 'django.contrib.auth.views.login' %}">
+              {% csrf_token %}
+              <p class="userName">
+                    <input type="text" name="username" value="" placeholder="用户名">
+                </p>
+                <p class="userPwd">
+                    <input type="password" name="password" value="" placeholder="密码">
+                </p>
+                <p class="userLoginBtn">
+                    <input type="submit" name="login" value="登录后台">
+                    <input type="hidden" name="next" value="{{ next }}" />
+                </p>
+            </form>
+            <div class="errors">
+                {% if form.errors %}
+                   <h2>用户名和密码不匹配，请重新输入.....</h2>
+                {% endif %}
+                </div>
+        </div>
+        <div class="footer">
+            <p>
+                枫车运维管理系统 版权所有 &copy; 2016 系统版本 v1.00 <br /> Release 20160219
+            </p>
+        </div>
+    </div>
+</body>
+</html>
