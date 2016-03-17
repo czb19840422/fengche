@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static 'images/favicon.ico' %}"  rel="icon" type="image/x-icon">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/common.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/index.css' %}" rel="stylesheet" type="text/css">
+    <script src="{% static 'bootstrap/js/jquery-2.2.0.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="fcp">
+                <p>枫车运维管理系统</p>
+            </div>
+            <div class="fcdl">
+                <ul>
+                    <li>欢迎{{ username }},登陆系统!</li>
+                    <li>|</li>
+                    <li><a  href="/logout/">退出系统</a></li>
+                </ul>
+            </div>
+        </div>
+        <section class="cnt-box">
+                <div class="contant-box">
+                    <div class="row">
+
+                        <div class="left-menu col-md-2">
+                            <ul class="dropdown">
+                                <li {% block svn %} {% endblock %}>
+                                    <a href="#"><img src="/static/images/left-power.png" height="29" width="25" alt=""><span>SVN管理</span><span class="right-icon"></span></a>
+                                    <ul class="nav nav-second-level">
+                                        <li {% block user %}{% endblock %}><a href="/svn/user/">&gt;&nbsp;账号管理</a></li>
+                                        <li {% block perm %}{% endblock %}><a href="/svn/perm/">&gt;&nbsp;权限管理</a></li>
+                                        <li {% block server %}{% endblock %}><a href="/svn/server/">&gt;&nbsp;服务管理</a></li>
+                                        <li {% block backup %}{% endblock %}><a href="/svn/backup/">&gt;&nbsp;备份管理</a></li>
+                                        <li {% block fwq %}{% endblock %}><a href="/svn/fwq/">&gt;&nbsp;服务器管理</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/static/images/left-finance.png" height="29" width="25" alt=""><span>系统管理</span><span class="right-icon"></span></a>
+                                    <ul class="nav nav-second-level">
+                                        <li><a href="/sys/admin/index">&gt;&nbsp;账号管理</a></li>
+                                        <li><a href="/sys/role/index">&gt;&nbsp;角色管理</a></li>
+                                        <li><a href="/sys/role/index">&gt;&nbsp;资源管理</a></li>
+                                        <li><a href="/sys/log/index">&gt;&nbsp;账号操作日志</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/static/images/left-goods.png" height="29" width="25" alt=""><span>系统管理</span><span class="right-icon"></span></a>
+                                    <ul class="nav nav-second-level">
+                                        <li><a href="/sys/admin/index">&gt;&nbsp;账号管理</a></li>
+                                        <li><a href="/sys/role/index">&gt;&nbsp;角色管理</a></li>
+                                        <li><a href="/sys/role/index">&gt;&nbsp;资源管理</a></li>
+                                        <li><a href="/sys/log/index">&gt;&nbsp;账号操作日志</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/static/images/left-member.png" height="29" width="25" alt=""><span>系统管理</span><span class="right-icon"></span></a>
+                                    <ul class="nav nav-second-level">
+                                        <li><a href="/sys/admin/index">&gt;&nbsp;账号管理</a></li>
+                                        <li><a href="/sys/role/index">&gt;&nbsp;角色管理</a></li>
+                                        <li><a href="/sys/role/index">&gt;&nbsp;资源管理</a></li>
+                                        <li><a href="/sys/log/index">&gt;&nbsp;账号操作日志</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/static/images/left-order.png" height="29" width="25" alt=""><span>系统管理</span><span class="right-icon"></span></a>
+                                    <ul class="nav nav-second-level">
+                                        <li><a href="/sys/admin/index">&gt;&nbsp;账号管理</a></li>
+                                        <li><a href="/sys/role/index">&gt;&nbsp;角色管理</a></li>
+                                        <li><a href="/sys/role/index">&gt;&nbsp;资源管理</a></li>
+                                        <li><a href="/sys/log/index">&gt;&nbsp;账号操作日志</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/static/images/left-suipian.png" height="29" width="25" alt=""><span>系统管理</span><span class="right-icon"></span></a>
+                                    <ul class="nav nav-second-level">
+                                        <li><a href="/sys/admin/index">&gt;&nbsp;账号管理</a></li>
+                                        <li><a href="/sys/role/index">&gt;&nbsp;角色管理</a></li>
+                                        <li><a href="/sys/role/index">&gt;&nbsp;资源管理</a></li>
+                                        <li><a href="/sys/log/index">&gt;&nbsp;账号操作日志</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/static/images/left-tongzhi.png" height="29" width="25" alt=""><span>系统管理</span><span class="right-icon"></span></a>
+                                    <ul class="nav nav-second-level">
+                                        <li><a href="/sys/admin/index">&gt;&nbsp;账号管理</a></li>
+                                        <li><a href="/sys/role/index">&gt;&nbsp;角色管理</a></li>
+                                        <li><a href="/sys/role/index">&gt;&nbsp;资源管理</a></li>
+                                        <li><a href="/sys/log/index">&gt;&nbsp;账号操作日志</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/static/images/left-power.png" height="29" width="25" alt=""><span>系统管理</span><span class="right-icon"></span></a>
+                                    <ul class="nav nav-second-level">
+                                        <li><a href="/sys/admin/index">&gt;&nbsp;账号管理</a></li>
+                                        <li><a href="/sys/role/index">&gt;&nbsp;角色管理</a></li>
+                                        <li><a href="/sys/role/index">&gt;&nbsp;资源管理</a></li>
+                                        <li><a href="/sys/log/index">&gt;&nbsp;账号操作日志</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/static/images/left-count.png" height="29" width="25" alt=""><span>系统管理</span><span class="right-icon"></span></a>
+                                    <ul class="nav nav-second-level">
+                                        <li><a href="/sys/admin/index">&gt;&nbsp;账号管理</a></li>
+                                        <li><a href="/sys/role/index">&gt;&nbsp;角色管理</a></li>
+                                        <li><a href="/sys/role/index">&gt;&nbsp;资源管理</a></li>
+                                        <li><a href="/sys/log/index">&gt;&nbsp;账号操作日志</a></li>
+                                    </ul>
+                                </li>
+                                <li><div class="kbnr"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <div class="footer">
+            <p>
+                枫车运维管理系统 版权所有 &copy; 2016 系统版本 v1.00 <br /> Release 20160219
+            </p>
+        </div>
+    </div>
+<script src="/static/js/leftmenu.min.js"></script>
+</body>
+</html>
