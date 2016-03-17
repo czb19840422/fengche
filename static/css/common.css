@@ -264,3 +264,7 @@ header.header .header-box .user-box .user-select {
 .star-icon img {
   width: 22px;
   margin-left: 2px; }
+
+.right-cnt {
+  width: 82% !important; }
+
